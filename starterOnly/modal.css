@@ -534,3 +534,16 @@ footer {
   color: red;
   margin-top: 0.3rem;
 }
+
+.successful-reservation {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #232323;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 50px 0 50px 0;
+}
