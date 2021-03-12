@@ -67,6 +67,30 @@ form.checkbox1.addEventListener("change", function (e) {
   verifCGU(this);
 });
 
+// press submit button
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  delMessageError("first-message");
+  delMessageError("last-message");
+  delMessageError("email-message");
+  delMessageError("birthdate-message");
+  delMessageError("quantity-message");
+  delMessageError("location-message");
+  delMessageError("cgu-message");
+  if (
+    verifFirstName(first) &&
+    verifLastName(last) &&
+    verifEmail(email) &&
+    verifBirthDate(birthdate) &&
+    verifQuantity(quantity) &&
+    verifLocation() &&
+    verifCGU(checkbox1)
+  ) {
+    modalSuccessful.style.display = "flex";
+    this.reset();
+  }
+});
+
 //-------------------- FUNCTIONS --------------------//
 
 // launch modal form
@@ -255,28 +279,3 @@ function delMessageError(delElement) {
     c.parentNode.removeChild(c);
   });
 }
-
-// press submit button
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  delMessageError("first-message");
-  delMessageError("last-message");
-  delMessageError("email-message");
-  delMessageError("birthdate-message");
-  delMessageError("quantity-message");
-  delMessageError("location-message");
-  delMessageError("cgu-message");
-  if (
-    verifFirstName(first) &&
-    verifLastName(last) &&
-    verifEmail(email) &&
-    verifBirthDate(birthdate) &&
-    verifQuantity(quantity) &&
-    verifLocation() &&
-    verifCGU(checkbox1)
-  ) {
-    alert("ça marche !");
-    modalSuccessful.style.display = "flex";
-    this.reset();
-  }
-});
