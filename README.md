@@ -5,4 +5,4 @@
 3. Il n'y a aucune dépendance ;
 4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
 
-starterOnly/index.html
+https://kamel04.github.io/GameOn-website-FR/starterOnly/index.html
